@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #141414;
+    margin: 0rem;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem 0rem 0rem 9%;
+    /* justify-content: center; */
+}
+
+.logo {
+    font-size: 3.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: default;
+    font-family: 'Mr Dafoe', cursive;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    user-select: none;
+}
+
+header a i {
+    color: white;
+    padding: 0.4rem 0rem 0rem 1rem;
+    font-size: 4rem;
+    animation: slideRight 1s ease forwards;
+    user-select: none;
+}
+.switchpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+.switchpage a{
+    color: rgb(94, 94, 94);
+    padding-right: 3rem;
+    font-size: 1.6rem;
+    user-select: none;
+    text-decoration: none;
+}
+.switchpage a:hover, .switchpage a.active{
+    color: white;
+}
+section{
+    min-height: 100vh;
+}
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none;
+    /* -- Prevent image highlighting -- */
+}
+
+#image-track>.image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+}
+
+.odd {
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .8s;
+}
+
+.even {
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .5s;
+}
+.about{
+    transition: 3s;
+}
+.home{
+    transition: 3s;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: var(--second-bg-color);
+}
+.about-img img{
+    width: 35vw;
+    -webkit-clip-path: circle(100% at 100% 100%);
+  clip-path: circle(100% at 100% 100%);
+}
+.heading{
+    text-align: center;
+    font-size: 45px;
+    color: white;
+}
+.heading span{
+    color: #ffdf35
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+    color: white;
+}
+.about-content h3{
+    font-size: 26px;
+    color: #ffdf35;
+}
+.about-content p{
+    font-size: 16px;
+    margin: 20px 0 30px;
+    color: white;
+    text-align: justify;
+    margin-right: 60px;
+}
+
+
+/* ANimations */
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* responsive */
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+    .about-content p{
+        font-size: 14px;
+    }
+    .about-content h2{
+        font-size: 40px;
+    }
+    .about-content h3 {
+        font-size: 25px;
+    }
+    }
+@media (max-width: 1000px){
+    .about-img img{
+        width: 354px;
+        height: 354px;
+    }
+}
+@media (max-width: 880px){
+        .topcontainer{
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+        }
+        .switchpage{
+            display: flex;
+            align-items: center;
+            transform: translateX(6vw);
+        }
+        .about-content h2{
+            font-size: 35px;
+        }
+        .about-content h3 {
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 794px){
+        .about-content h2{
+            font-size: 32px;
+        }
+        .about-content h3 {
+            font-size: 17px;
+        }
+        .about-img img{
+            width: 320px;
+            height: 320px;
+        }
+        .about-content p{
+            font-size: 13px;
+        }
+    }
+    @media (max-width: 725px){
+        .about-content h2{
+            font-size: 30px;
+        }
+        .about-content h3 {
+            font-size: 16px;
+        }
+        .about-img img{
+            width: 300px;
+            height: 300px;
+        }
+        .about-content p{
+            font-size: 12px;
+        }
+    }
+    @media (max-width: 680px){
+        .about{
+            display: flex;
+            flex-direction: column;
+        }
+        .about-content h2{
+            text-align: center;
+        }
+        .about-content h3 {
+            text-align: center;
+        }
+        .about-img img{
+            clip-path: circle(140px at center);
+            margin-top: 55px;
+        }
+        .about-content p{
+            text-align: justify;
+            margin-left: 60px;
+        }
+    }
+@media (max-width: 660px){
+    #image-track>.image {
+        width: 48vmin;
+        height: 64vmin;
+    }
+}
+@media (max-width: 536px){
+    .about-content h2{
+        font-size: 29px;
+    }
+    .about-content h3 {
+        font-size: 15px;
+    }
+    .about-img img{
+        width: 300px;
+        height: 300px;
+    }
+    .about-content p{
+        font-size: 11px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}
+@media (max-width: 500px){
+    #image-track>.image {
+        width: 58vmin;
+        height: 74vmin;
+    }
+}      
+@media (max-width: 440px){
+    #image-track>.image {
+        width: 66vmin;
+        height: 84vmin;
+    }
+}
+@media (max-width: 380px){
+    .logo, header a i{
+        font-size: 3rem;
+    }
+    .about-content h2{
+        font-size: 25px;
+    }
+    .about-content h3 {
+        font-size: 15px;
+    }
+    .about-img img{
+        clip-path: circle(125px at center);
+        width: 250px;
+        height: 250px;
+    }
+    .about-content p{
+        font-size: 10.5px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}        
