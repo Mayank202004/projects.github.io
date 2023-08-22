@@ -10,7 +10,7 @@
 }
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body {
@@ -18,7 +18,13 @@ body {
     width: 100vw;
     background-color: #141414;
     margin: 0rem;
+    
+    
+}
+.wrapper{
+    width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 header {
@@ -28,6 +34,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
+    z-index: 10;
 }
 
 .topcontainer {
@@ -73,8 +80,11 @@ header a i {
 .switchpage a:hover, .switchpage a.active{
     color: white;
 }
-section{
-    min-height: 100vh;
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    transition: 3s;
 }
 #image-track {
     display: flex;
@@ -106,17 +116,19 @@ section{
     animation-delay: .5s;
 }
 .about{
-    transition: 3s;
-}
-.home{
-    transition: 3s;
-}
-.about{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
     background: var(--second-bg-color);
+    position: relative;
+    transition: 3s;
+    height: 100vh;
+    width: 100vw;
+}
+.about-img{
+    left: 0;
 }
 .about-img img{
     width: 35vw;
@@ -130,6 +142,10 @@ section{
 }
 .heading span{
     color: #ffdf35
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
 }
 .about-content h2{
     text-align: left;
