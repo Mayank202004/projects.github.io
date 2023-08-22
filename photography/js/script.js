@@ -76,14 +76,13 @@ ScrollReveal().reveal('.revealright', { origin: 'right' });
 
 
 
-//================================ locomotive and scroll trigger dont work together so this part ===========================
+
 function loco(){
-  gsap.registerPlugin(ScrollTrigger);
 
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
 const locoScroll = new LocomotiveScroll({
-el: document.querySelector("#main"),
+el: document.querySelector("#home"),
 smooth: true
 });
 }
