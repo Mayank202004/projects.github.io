@@ -11,3 +11,4 @@
 //     </div>`
 // })
 // a.innerHTML = b;
+window.alert("This website is created solely for educational purposes. We do not own any of the copyrighted material displayed here. This project is not intended for any commercial or monetary gain. All rights and ownership of the original content belong to their respective owners.");
