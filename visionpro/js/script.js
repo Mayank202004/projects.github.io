@@ -1,3 +1,7 @@
+// disclaimer
+window.alert("\nDisclaimer:\nThis website is a project created for educational purposes and does not have any affiliation with or endorsement from Apple Inc. The content, design, and branding used in this project are intended solely for learning and demonstration purposes. All trademarks, logos, and copyrights associated with Apple Inc. are the property of their respective owners. The Apple Vision Pro website clone is not intended for commercial use or any form of profit generation. It is a project undertaken to explore web development techniques and design principles. We respect the intellectual property rights of Apple Inc. and encourage all visitors to support and engage with their official products and services through their official channels.\n\nNote:\nThis project is not endorsed or approved by Apple Inc., and all rights for the original Apple Vision Pro website content belong to Apple Inc.")
+
+/*=========================================================================*/ 
 /*================================= Sticky navbar ================================ */
     let header = document.querySelector('header');
     header.classList.toggle('sticky',window.scrollY > 100);
