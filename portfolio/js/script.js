@@ -60,4 +60,25 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.heading', { origin: 'top' });
-ScrollReveal().reveal('.skill-container, .portfolio-box, .contact form', { origin: 'bottom' });
+
+
+
+  //============ unavailable content =====================
+  document.addEventListener('DOMContentLoaded', function () {
+    const alertButtons = document.querySelectorAll('.btn');
+
+    alertButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            alert('This feature is currently unavailable.');
+        });
+    });
+});
+
+
+  
+  
+  
+  
+  
+  
