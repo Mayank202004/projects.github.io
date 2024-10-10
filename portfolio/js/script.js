@@ -40,6 +40,8 @@ window.onscroll = () => {
 var typed = new Typed(".multiple-text", {
     strings: [
         "Student",
+        "Android Developer",
+        "ML Enthusiast",
         "Frontend Apprentice",
         "Youtuber",
         "Programmer",
